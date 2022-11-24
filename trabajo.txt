@@ -1,2 +1,8 @@
-eeee : Pendiente
-recoger los platos : Pendiente
+HOLA : Pendiente
+CARACOLA : eeeee
+PISCOLA : Pendiente
+COLA : Hecho
+Comer : Pendiente
+Cagar : Pendiente
+Hacer la comida : a medio hacer
+Hacer los deberes : Pendiente
