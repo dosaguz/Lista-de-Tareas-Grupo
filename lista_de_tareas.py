@@ -22,6 +22,9 @@ def menu(ruta_archivo):
         insertar_tareas(ruta_archivo)
     elif opc1=="2":
         mostrar_tareas(ruta_archivo)
+        salirSus=input("\nPulse enter para salir")
+        if salirSus=="":
+            menu(ruta_archivo)
     elif opc1=="3":
         modificar_tareas(ruta_archivo)
     
@@ -31,6 +34,7 @@ def menu(ruta_archivo):
         opc2=input("Estas seguro perderas lo que haya escrito en él (S/N)")
         if opc2.lower()=="s":
             crear_archivo(ruta_archivo)
+            menu(ruta_archivo)
         elif opc2.lower()=="n":
             menu(ruta_archivo)
     
@@ -54,10 +58,14 @@ def menu(ruta_archivo):
 ⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣦⣤⣤⣤⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠻⢿⣿⣿⣿⣿⣿⣿⠿⠋⠉⠛⠋⠉⠉⠁⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠁""")
+        salirSus=input("\nPulse enter para salir")
+        if salirSus=="":
+            menu(ruta_archivo)
+
     else:
         print("Error, vuelva a elegir una opcion")
         print("")
-        menu()
+        menu(ruta_archivo)
 
 
 def insertar_tareas(ruta_archivo):
@@ -87,6 +95,7 @@ def mostrar_tareas(ruta_archivo):
             print("")
             print(f"{contador}.-{linea}",end='')
             contador+=1
+
 
 def modificar_tareas(ruta_archivo):
     mostrar_tareas(ruta_archivo)
