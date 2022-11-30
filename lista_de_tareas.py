@@ -1,4 +1,5 @@
 import os
+
 ruta_base = 'C:/Users/Tarde/Desktop/Lista de Tareas/'
 archivo = ruta_base + 'trabajo.txt'
 
@@ -6,7 +7,7 @@ def crear_archivo(ruta_archivo):
     open(ruta_archivo, "w+")
 
 def menu(ruta_archivo):
-    os.system("cls")
+    os.system("clear")
     
     print("""-----------Lista de tareas-----------
     1.-Añade una nueva tarea
@@ -87,7 +88,7 @@ def insertar_tareas(ruta_archivo):
     menu(ruta_archivo)
 
 def mostrar_tareas(ruta_archivo):
-    os.system("cls")
+    os.system("clear")
     with open(ruta_archivo, 'r') as fichero:
         print("LISTA DE TAREAS")
         contador=1
@@ -110,7 +111,7 @@ def modificar_tareas(ruta_archivo):
             line=line.replace("\n","")
             (key, val) = line.split(" : ")
             d[key] = val
-        pregunta_3 = input("Por favor, especifique el estado de la tarea: ")
+        pregunta_3 = "Hecho"
         list_dict = list(d)
         pregunta_2=pregunta_2-1
         cambio= list_dict[pregunta_2]
